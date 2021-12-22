@@ -6,7 +6,7 @@ root=Tk()
 root.geometry("1200x75")
 root.title("Weather")
 
-#https://api.weatherbit.io/v2.0/current?postal_code=302016&key=888cdf913f13414194d35e9afa73acf6&include=minutely
+#https://api.weatherbit.io/v2.0/current?postal_code=302016&key=""YOUR API KEY""&include=minutely
 
 def zipfind():
     #zipentry.get()
@@ -14,7 +14,7 @@ def zipfind():
     #ziplbl.grid(row=2,column=0)
     
     try: 
-        apireq=requests.get("https://api.weatherbit.io/v2.0/current?postal_code="+zipentry.get()+"&key=888cdf913f13414194d35e9afa73acf6")   
+        apireq=requests.get("https://api.weatherbit.io/v2.0/current?postal_code="+zipentry.get()+"&key= YOUR API KEY ")   
         api=json.loads(apireq.content)
         city=api['data'][0]['city_name']
         aqi=api['data'][0]['aqi']
